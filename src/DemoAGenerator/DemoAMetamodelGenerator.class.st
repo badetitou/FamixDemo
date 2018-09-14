@@ -1,6 +1,15 @@
 "
 generator := DemoAMetamodelGenerator new.
 generator generate.
+DemoAMetamodelGenerator resetMetamodel.
+
+model := DemoAExample generateDemo.
+model.
+
+DmAGlobalView new openViewForModel: model.
+
+mooseModel := MooseModel importFromMSEStream: 'D:\lucene.mse' asFileReference readStream.
+mooseModel
 "
 Class {
 	#name : #DemoAMetamodelGenerator,
